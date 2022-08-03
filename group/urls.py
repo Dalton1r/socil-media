@@ -1,0 +1,37 @@
+from django.urls import path
+from group import views
+
+
+urlpatterns = [
+    path('', views.overviewlist, name='overview'),
+    path('detail/<int:pk>/', views.groupdetail, name='group_detail'),
+    path('list/', views.grouplist, name='group_list'),
+    path('create/', views.groupcreate, name='group_create'),
+    path('update/<int:pk>/', views.groupupdate, name='group_update'),
+    path('delete/<int:pk>/', views.groupdelete, name='group_delete'),
+    path('post-detail/<int:pk>/', views.postdetail, name='post_detail'),
+    path('post-list/', views.postlist, name='post_list'),
+    path('post-create/', views.postcreate, name='post_create'),
+    path('post-update/<int:pk>/', views.postupdate, name='post_update'),
+    path('post-delete/<int:pk>/', views.postdelete, name='post_delete'),
+    path('commnet-detail/<int:pk>/', views.commnetdetail, name='commnet_detail'),
+    path('commnet-list/', views.commnetlist, name='commnet_list'),
+    path('commnet-create/', views.commnetcreate, name='commnet_create'),
+    path('commnet-update/<int:pk>/', views.commnetupdate, name='commnet_update'),
+    path('commnet-delete/<int:pk>/', views.commnetdelete, name='commnet_delete'),
+    path('groupmember-detail/<int:pk>/', views.groupmemberdetail, name='groupmember_detail'),
+    path('groupmember-list/', views.groupmemberlist, name='groupmember_list'),
+    path('groupmember-create/', views.groupmembercreate, name='groupmember_create'),
+    path('groupmember-update/<int:pk>/', views.groupmemberupdate, name='groupmember_update'),
+    path('groupmember-delete/<int:pk>/', views.groupmemberdelete, name='groupmember_delete'),
+    path('bookmark-detail/<int:pk>/', views.bookmarkdetail, name='bookmark_detail'),
+    path('bookmark-list/', views.bookmarklist, name='bookmark_list'),
+    path('bookmark-create/', views.bookmarkcreate, name='bookmark_create'),
+    path('bookmark-update/<int:pk>/', views.bookmarkupdate, name='bookmark_update'),
+    path('bookmark-delete/<int:pk>/', views.bookmarkdelete, name='bookmark_delete'),
+    path('like-detail/<int:pk>/', views.likedetail, name='like_detail'),
+    path('like-list/', views.likelist, name='like_list'),
+    path('like-create/', views.likecreate, name='like_create'),
+    path('like-update/<int:pk>/', views.likeupdate, name='like_update'),
+    path('like-delete/<int:pk>/', views.likedelete, name='like_delete'),
+]
